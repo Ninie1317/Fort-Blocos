@@ -30,7 +30,9 @@
         <ul class="nav-list">
           <li><a href="index.html">Início</a></li>
           <li><a href="produtos.html" class="active">Produtos</a></li>
+          <li><a href="motivos.html">Motivos</a></li>
           <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="orcamento.html" class="btn">Orçamento</a></li>
           <li><a href="contato.html" class="btn btn-primary">Contato</a></li>
         </ul>
       </nav>
@@ -40,23 +42,47 @@
   <main class="container">
     <h1>Produtos</h1>
 
-    <section class="product-grid">
-      <article class="product-card">
-        <h3>Bloco de Concreto 14x19x39</h3>
-        <p>Ideal para paredes estruturais e vedação. Alta resistência e precisão dimensional.</p>
-      </article>
-      <article class="product-card">
-        <h3>Piso Intertravado 6cm</h3>
-        <p>Aplicação em calçadas e áreas de tráfego leve. Diversas cores sob encomenda.</p>
-      </article>
-      <article class="product-card">
-        <h3>Meio-fio de Concreto</h3>
-        <p>Durabilidade e acabamento para vias e estacionamentos.</p>
-      </article>
-    </section>
+    <div class="tabs" data-tabs>
+      <div class="tab-list" role="tablist">
+        <button class="tab active" role="tab" aria-selected="true" data-tab="blocos">Blocos</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="pisos">Pisos</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="meiofio">Meio-fio</button>
+      </div>
+
+      <section class="tab-panel show" data-panel="blocos">
+        <div class="product-grid">
+          <article class="product-card">
+            <h3>Bloco de Concreto 14x19x39</h3>
+            <p>Para paredes estruturais e vedação. Alta resistência e precisão dimensional.</p>
+          </article>
+          <article class="product-card">
+            <h3>Bloco de Concreto 9x19x39</h3>
+            <p>Opção econômica para vedações internas e divisórias.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="tab-panel" data-panel="pisos">
+        <div class="product-grid">
+          <article class="product-card">
+            <h3>Piso Intertravado 6cm</h3>
+            <p>Calçadas e áreas de tráfego leve. Cores sob encomenda.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="tab-panel" data-panel="meiofio">
+        <div class="product-grid">
+          <article class="product-card">
+            <h3>Meio-fio de Concreto</h3>
+            <p>Durabilidade e acabamento para vias e estacionamentos.</p>
+          </article>
+        </div>
+      </section>
+    </div>
 
     <section class="cta-inline">
-      <a href="contato.html" class="btn">Pedir orçamento</a>
+      <a href="orcamento.html" class="btn">Pedir orçamento</a>
     </section>
   </main>
 

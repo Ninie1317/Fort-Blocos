@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contato | Fort Blocos</title>
-  <meta name="description" content="Solicite orçamento ou tire dúvidas com a equipe Fort Blocos." />
+  <title>Orçamento | Fort Blocos</title>
+  <meta name="description" content="Faça uma estimativa rápida de orçamento para blocos e pisos.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -32,38 +32,52 @@
           <li><a href="produtos.html">Produtos</a></li>
           <li><a href="motivos.html">Motivos</a></li>
           <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="orcamento.html" class="btn">Orçamento</a></li>
-          <li><a href="contato.html" class="active btn btn-primary">Contato</a></li>
+          <li><a href="orcamento.html" class="active btn">Orçamento</a></li>
+          <li><a href="contato.html" class="btn btn-primary">Contato</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <h1>Contato</h1>
-    <p>Envie sua solicitação de orçamento. Responderemos o mais breve possível.</p>
+    <h1>Estimativa de Orçamento</h1>
+    <p>Preencha as informações para estimar a quantidade e o custo aproximado. Valores meramente ilustrativos.</p>
 
-    <form class="contact-form" id="contactForm">
+    <form id="calcForm" class="contact-form">
       <div class="grid">
         <label>
-          Nome
-          <input type="text" name="nome" required />
+          Tipo de produto
+          <select name="produto" required>
+            <option value="bloco14">Bloco 14x19x39</option>
+            <option value="piso6">Piso Intertravado 6cm</option>
+          </select>
         </label>
         <label>
-          Telefone/WhatsApp
-          <input type="tel" name="telefone" required />
+          Área/Comprimento (m² ou m)
+          <input type="number" name="area" min="1" step="0.1" placeholder="Ex.: 50" required />
         </label>
       </div>
-      <label>
-        E-mail
-        <input type="email" name="email" required />
-      </label>
-      <label>
-        Mensagem
-        <textarea name="mensagem" rows="5" required></textarea>
-      </label>
-      <button type="submit" class="btn btn-primary">Enviar</button>
+      <div class="grid">
+        <label>
+          Preço unitário (R$)
+          <input type="number" name="preco" min="0" step="0.01" placeholder="Ex.: 3.50" required />
+        </label>
+        <label>
+          Rend./m² (peças)
+          <input type="number" name="rendimento" min="1" step="1" placeholder="Ex.: 12" required />
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Calcular</button>
     </form>
+
+    <div id="resultado" class="result-box" hidden>
+      <h2>Resultado</h2>
+      <p><strong>Quantidade estimada:</strong> <span id="qtd"></span> peças</p>
+      <p><strong>Subtotal:</strong> R$ <span id="subtotal"></span></p>
+      <div class="cta-inline">
+        <a class="btn" id="btnWhats" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">

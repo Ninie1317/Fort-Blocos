@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contato | Fort Blocos</title>
-  <meta name="description" content="Solicite orçamento ou tire dúvidas com a equipe Fort Blocos." />
+  <title>Por que Fort Blocos | Fort Blocos</title>
+  <meta name="description" content="Entenda os motivos para comprar com a Fort Blocos: qualidade, prazos e atendimento." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -30,40 +30,59 @@
         <ul class="nav-list">
           <li><a href="index.html">Início</a></li>
           <li><a href="produtos.html">Produtos</a></li>
-          <li><a href="motivos.html">Motivos</a></li>
+          <li><a href="motivos.html" class="active">Motivos</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="orcamento.html" class="btn">Orçamento</a></li>
-          <li><a href="contato.html" class="active btn btn-primary">Contato</a></li>
+          <li><a href="contato.html" class="btn btn-primary">Contato</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <h1>Contato</h1>
-    <p>Envie sua solicitação de orçamento. Responderemos o mais breve possível.</p>
+    <h1>Por que escolher a Fort Blocos</h1>
 
-    <form class="contact-form" id="contactForm">
-      <div class="grid">
-        <label>
-          Nome
-          <input type="text" name="nome" required />
-        </label>
-        <label>
-          Telefone/WhatsApp
-          <input type="tel" name="telefone" required />
-        </label>
+    <section class="features">
+      <div class="feature">
+        <h3>Qualidade e Resistência</h3>
+        <p>Controle de qualidade em todas as etapas e matéria-prima selecionada.</p>
       </div>
-      <label>
-        E-mail
-        <input type="email" name="email" required />
-      </label>
-      <label>
-        Mensagem
-        <textarea name="mensagem" rows="5" required></textarea>
-      </label>
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
+      <div class="feature">
+        <h3>Entrega no Prazo</h3>
+        <p>Planejamento logístico para atender com agilidade e confiabilidade.</p>
+      </div>
+      <div class="feature">
+        <h3>Atendimento Consultivo</h3>
+        <p>Equipe pronta para orientar na melhor especificação para sua obra.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Nossa história</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h4>Fundação</h4>
+            <p>Começamos com a missão de entregar blocos confiáveis e acessíveis para a região.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h4>Expansão</h4>
+            <p>Ampliamos a capacidade produtiva e o portfólio com pisos, meio-fio e outros artefatos.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h4>Hoje</h4>
+            <p>Seguimos evoluindo com tecnologia e atendimento próximo aos clientes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
