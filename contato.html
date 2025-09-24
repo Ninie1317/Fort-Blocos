@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato | Fort Blocos</title>
+  <meta name="description" content="Solicite orçamento ou tire dúvidas com a equipe Fort Blocos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">Fort Blocos</a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html" class="active btn btn-primary">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contato</h1>
+    <p>Envie sua solicitação de orçamento. Responderemos o mais breve possível.</p>
+
+    <form class="contact-form" id="contactForm">
+      <div class="grid">
+        <label>
+          Nome
+          <input type="text" name="nome" required />
+        </label>
+        <label>
+          Telefone/WhatsApp
+          <input type="tel" name="telefone" required />
+        </label>
+      </div>
+      <label>
+        E-mail
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        Mensagem
+        <textarea name="mensagem" rows="5" required></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Fort Blocos — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
